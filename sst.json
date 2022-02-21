@@ -1,0 +1,5 @@
+{
+  "name": "qna-user",
+  "region": "ap-south-1",
+  "main": "stacks/index.ts"
+}

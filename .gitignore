@@ -1,0 +1,28 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+
+# sst build output
+.build
+.sst
+
+# environments
+.env*.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+client_secret_867207334312-7c5ggb9ejhbbct6i07pc0nid7venog7e.apps.googleusercontent.com.json
+
+qna_accessKeys.csv
