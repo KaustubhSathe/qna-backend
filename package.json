@@ -1,5 +1,5 @@
 {
-  "name": "qna-user",
+  "name": "qna-backend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,23 +7,42 @@
     "start": "sst start",
     "build": "sst build",
     "deploy": "sst deploy",
-    "remove": "sst remove"
+    "remove": "sst remove",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prettier": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
-      "serverless-stack"
+      "serverless-stack",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+      "warnOnUnsupportedTypeScriptVersion": false
+    },
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
     ]
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.1",
     "@types/aws-lambda": "^8.10.70",
     "@types/axios": "^0.14.0",
-    "@types/node": "<15.0.0"
+    "@types/node": "<15.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
     "@serverless-stack/cli": "0.65.4",
     "@serverless-stack/resources": "0.65.4",
     "aws-cdk-lib": "2.7.0",
     "axios": "^0.26.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
