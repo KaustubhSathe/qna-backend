@@ -11,11 +11,11 @@ export default class AuthStack extends sst.Stack {
     const api = new sst.Api(this, "Api", {
       defaultAuthorizationType: sst.ApiAuthorizationType.NONE,
       routes: {
-        "GET /public": {
-          function: "src/public.handler",
+        "GET /set": {
+          function: "src/auth/set.handler",
         },
-        "GET /public2": {
-          function: "src/public2.handler",
+        "GET /get": {
+          function: "src/auth/get.handler",
         },
       },
     });
