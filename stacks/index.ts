@@ -1,4 +1,4 @@
-import AuthStack from "./AuthStack";
+import MyStack from "./MyStack";
 import * as sst from "@serverless-stack/resources";
 
 export default function main(app: sst.App): void {
@@ -7,7 +7,7 @@ export default function main(app: sst.App): void {
     runtime: "nodejs14.x",
   });
 
-  new AuthStack(app, "auth-stack");
+  new MyStack(app, "my-stack");
 
   // Add more stacks
 }
