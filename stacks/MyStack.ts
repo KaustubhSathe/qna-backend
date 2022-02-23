@@ -1,4 +1,5 @@
 import * as sst from "@serverless-stack/resources";
+import { PermissionType } from "@serverless-stack/resources";
 
 // const GOOGLE_CLIENT_ID =
 //   "867207334312-7c5ggb9ejhbbct6i07pc0nid7venog7e.apps.googleusercontent.com";
@@ -35,7 +36,7 @@ export default class MyStack extends sst.Stack {
       },
     });
 
-    api.attachPermissions([table]);
+    api.attachPermissions(PermissionType.ALL);
 
     this.addOutputs({
       ApiEndpoint: api.url,
