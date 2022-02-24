@@ -1,5 +1,0 @@
-{
-  "name": "qna-backend",
-  "region": "ap-south-1",
-  "main": "stacks/index.ts"
-}
