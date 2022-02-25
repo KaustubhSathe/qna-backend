@@ -10,8 +10,8 @@ on:
       - 'feature**'
 
 env:
-  PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AKIAZAFEOYJEKQBUNNGW }}
-  PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.+9mnQn9oAcUEvnWsjbRIsKFE/5ILIlpKRNeXf7im }}
+  PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.PIPELINE_USER_ACCESS_KEY_ID }}
+  PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.PIPELINE_USER_SECRET_ACCESS_KEY }}
   SAM_TEMPLATE: template.yaml
   TESTING_STACK_NAME: qna-backend-cicd-dev
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::618820190792:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-19EP3EX36J0RL
