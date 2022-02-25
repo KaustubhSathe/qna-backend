@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "build": "serverless webpack --stage local",
+    "deploy": "serverless deploy --stage local",
+    "watch": "nodemon -w src -e '.*' -x 'npm run build'",
+    "start": "tsc && npm run deploy && npm run watch"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.1",
@@ -17,7 +21,8 @@
     "lint-staged": "^12.3.4",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
-    "serverless-localstack": "^0.4.35",
+    "serverless-dynamodb-local": "^0.2.40",
+    "serverless-offline": "^8.5.0",
     "typescript": "^4.5.5"
   },
   "dependencies": {
